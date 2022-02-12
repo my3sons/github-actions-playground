@@ -8486,8 +8486,10 @@ async function run() {
       ...github.context.repo,
       title,
       body,
-      assignees: assignees ? assignees.split("\n") : undefined
+    //  assignees: assignees ? assignees.split("\n") : undefined
     });
+
+    core.info("issue: ", response);
 
     core.setOutput("issue", JSON.stringify(response.data));
   } catch (error) {
