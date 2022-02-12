@@ -19,7 +19,7 @@ async function run() {
     //  assignees: assignees ? assignees.split("\n") : undefined
     });
 
-    core.info(response);
+    core.info(JSON.stringify(response));
 
     core.setOutput("issue", JSON.stringify(response.data));
   } catch (error) {
