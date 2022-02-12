@@ -8489,7 +8489,7 @@ async function run() {
     //  assignees: assignees ? assignees.split("\n") : undefined
     });
 
-    core.info("issue: ", response);
+    core.info(response);
 
     core.setOutput("issue", JSON.stringify(response.data));
   } catch (error) {
